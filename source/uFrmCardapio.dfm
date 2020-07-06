@@ -10806,7 +10806,7 @@ object FrmCardapio: TFrmCardapio
         63.500000000000000000
         1899.708333333333000000)
       Master = QuickRep1
-      DataSet = DataModule1.qryLanches_Ingredientes
+      DataSet = DataModule1.qryCardapio_itens
       PrintBefore = False
       PrintIfEmpty = True
       object QRDBText5: TQRDBText

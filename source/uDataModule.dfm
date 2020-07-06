@@ -544,7 +544,7 @@ object DataModule1: TDataModule1
     SQL.Strings = (
       'SELECT * FROM lanches ORDER BY nome;')
     Left = 448
-    Top = 240
+    Top = 64
     object AutoIncField2: TAutoIncField
       DisplayLabel = 'C'#243'digo'
       DisplayWidth = 10
@@ -581,7 +581,7 @@ object DataModule1: TDataModule1
         DataType = ftInteger
         NumericScale = 255
         Precision = 255
-        Value = 6
+        Value = Null
       end>
     SQL.Strings = (
       'SELECT'
@@ -594,8 +594,8 @@ object DataModule1: TDataModule1
       '  LI.idlanche=:idlanche'
       'ORDER BY'
       '  I.nome,LI.idlanche;')
-    Left = 464
-    Top = 296
+    Left = 520
+    Top = 72
     object WideStringField6: TWideStringField
       DisplayLabel = 'Nome do Ingrediente'
       DisplayWidth = 90
@@ -634,12 +634,12 @@ object DataModule1: TDataModule1
   end
   object dsCardapio: TDataSource
     DataSet = qryCardapio
-    Left = 512
-    Top = 240
+    Left = 464
+    Top = 144
   end
   object dsCardapio_Itens: TDataSource
     DataSet = qryCardapio_itens
-    Left = 544
-    Top = 296
+    Left = 536
+    Top = 144
   end
 end
