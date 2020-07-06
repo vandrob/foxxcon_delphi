@@ -22671,10 +22671,10 @@ object FrmAbertura: TFrmAbertura
     OnClick = btnContinuarClick
   end
   object memoSCRIPT: TMemo
-    Left = 32
+    Left = 296
     Top = 16
-    Width = 501
-    Height = 329
+    Width = 213
+    Height = 113
     Lines.Strings = (
       
         'CREATE TABLE [ingredientes] ([idingrediente] Counter,[nome] Text' +
@@ -22955,51 +22955,56 @@ object FrmAbertura: TFrmAbertura
       
         'insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanche' +
         's,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,' +
-        'valor_desconto,valor_total) values ('#39'1'#39','#39'TALITA'#39','#39#39','#39'2'#39','#39'50,06'#39',' +
-        #39'9,78'#39','#39'59,84'#39','#39'4'#39','#39'0'#39','#39'0'#39','#39'59,84'#39');'
+        'valor_desconto,valor_total) values ('#39'1'#39','#39'TALITA'#39','#39#39','#39'2'#39','#39'11,81'#39',' +
+        #39'9,78'#39','#39'21,59'#39','#39'1'#39','#39'0'#39','#39'0'#39','#39'21,59'#39');'
       
         'insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanche' +
         's,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,' +
-        'valor_desconto,valor_total) values ('#39'2'#39','#39'CLEYTON'#39','#39#39','#39#39','#39'22,59'#39',' +
-        #39'15,98'#39','#39'38,57'#39','#39'1'#39','#39'0'#39','#39'0'#39','#39'38,57'#39');'
+        'valor_desconto,valor_total) values ('#39'2'#39','#39'CLEYTON'#39','#39#39','#39#39','#39'45,18'#39',' +
+        #39'15,98'#39','#39'61,16'#39','#39'2'#39','#39'3'#39','#39'1,36'#39','#39'59,8'#39');'
       
         'insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanche' +
         's,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,' +
-        'valor_desconto,valor_total) values ('#39'3'#39','#39'GIOVANI'#39','#39#39','#39#39','#39'66,1'#39','#39 +
-        '27,58'#39','#39'93,68'#39','#39'5'#39','#39'10'#39','#39'6,61'#39','#39'87,07'#39');'
+        'valor_desconto,valor_total) values ('#39'3'#39','#39'GIOVANI'#39','#39#39','#39#39','#39'57,78'#39',' +
+        #39'32,48'#39','#39'90,26'#39','#39'3'#39','#39'5'#39','#39'2,89'#39','#39'87,37'#39');'
       
         'insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanche' +
         's,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,' +
-        'valor_desconto,valor_total) values ('#39'4'#39','#39'JULIO BASSO'#39','#39#39','#39#39','#39'231' +
-        '6,28'#39','#39'285,4'#39','#39'2601,68'#39','#39'112'#39','#39'10'#39','#39'231,63'#39','#39'2370,05'#39');'
+        'valor_desconto,valor_total) values ('#39'4'#39','#39'JULIO BASSO'#39','#39#39','#39#39','#39'86,' +
+        '8'#39','#39'285,4'#39','#39'372,2'#39','#39'4'#39','#39'5'#39','#39'4,34'#39','#39'367,86'#39');'
       
         'insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanche' +
         's,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,' +
-        'valor_desconto,valor_total) values ('#39'5'#39','#39'VANDERLEI'#39','#39#39','#39#39','#39'13,22' +
-        #39','#39'0'#39','#39'13,22'#39','#39'1'#39','#39'0'#39','#39'0'#39','#39'13,22'#39');'
+        'valor_desconto,valor_total) values ('#39'5'#39','#39'VANDERLEI'#39','#39#39','#39#39','#39'66,1'#39 +
+        ','#39'0'#39','#39'66,1'#39','#39'5'#39','#39'10'#39','#39'6,61'#39','#39'59,49'#39');'
+      
+        'insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanche' +
+        's,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,' +
+        'valor_desconto,valor_total) values ('#39'6'#39','#39'MARIA'#39','#39#39','#39#39','#39'133,68'#39','#39 +
+        '12,49'#39','#39'146,17'#39','#39'6'#39','#39'10'#39','#39'13,37'#39','#39'132,8'#39');'
+      ''
       ''
       
         'insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunita' +
-        'rio,valortotal) values ('#39'15'#39','#39'1'#39','#39'2'#39','#39'2'#39','#39'11,81'#39','#39'23,62'#39');'
+        'rio,valortotal) values ('#39'15'#39','#39'1'#39','#39'2'#39','#39'1'#39','#39'11,81'#39','#39'11,81'#39');'
       
         'insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunita' +
-        'rio,valortotal) values ('#39'16'#39','#39'2'#39','#39'3'#39','#39'1'#39','#39'22,59'#39','#39'22,59'#39');'
+        'rio,valortotal) values ('#39'16'#39','#39'2'#39','#39'3'#39','#39'2'#39','#39'22,59'#39','#39'45,18'#39');'
       
         'insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunita' +
-        'rio,valortotal) values ('#39'17'#39','#39'1'#39','#39'1'#39','#39'2'#39','#39'13,22'#39','#39'26,44'#39');'
+        'rio,valortotal) values ('#39'18'#39','#39'3'#39','#39'1'#39','#39'1'#39','#39'13,22'#39','#39'13,22'#39');'
       
         'insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunita' +
-        'rio,valortotal) values ('#39'18'#39','#39'3'#39','#39'1'#39','#39'5'#39','#39'13,22'#39','#39'66,1'#39');'
+        'rio,valortotal) values ('#39'19'#39','#39'4'#39','#39'4'#39','#39'4'#39','#39'21,7'#39','#39'86,8'#39');'
       
         'insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunita' +
-        'rio,valortotal) values ('#39'19'#39','#39'4'#39','#39'4'#39','#39'100'#39','#39'21,7'#39','#39'2170'#39');'
+        'rio,valortotal) values ('#39'21'#39','#39'5'#39','#39'1'#39','#39'5'#39','#39'13,22'#39','#39'66,1'#39');'
       
         'insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunita' +
-        'rio,valortotal) values ('#39'20'#39','#39'4'#39','#39'5'#39','#39'12'#39','#39'12,19'#39','#39'146,28'#39');'
+        'rio,valortotal) values ('#39'22'#39','#39'3'#39','#39'6'#39','#39'2'#39','#39'22,28'#39','#39'44,56'#39');'
       
         'insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunita' +
-        'rio,valortotal) values ('#39'21'#39','#39'5'#39','#39'1'#39','#39'1'#39','#39'13,22'#39','#39'13,22'#39');'
-      ''
+        'rio,valortotal) values ('#39'25'#39','#39'6'#39','#39'6'#39','#39'6'#39','#39'22,28'#39','#39'133,68'#39');'
       ''
       
         'insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,va' +
@@ -23030,6 +23035,19 @@ object FrmAbertura: TFrmAbertura
         'insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,va' +
         'lorunitario,valortotal) values ('#39'16'#39','#39'4'#39','#39'23'#39','#39'12'#39','#39'6,7'#39','#39'80,4'#39')' +
         ';'
+      
+        'insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,va' +
+        'lorunitario,valortotal) values ('#39'17'#39','#39'3'#39','#39'18'#39','#39'1'#39','#39'4,9'#39','#39'4,9'#39');'
+      
+        'insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,va' +
+        'lorunitario,valortotal) values ('#39'19'#39','#39'6'#39','#39'11'#39','#39'1'#39','#39'3,1'#39','#39'3,1'#39');'
+      
+        'insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,va' +
+        'lorunitario,valortotal) values ('#39'20'#39','#39'6'#39','#39'21'#39','#39'1'#39','#39'4,89'#39','#39'4,89'#39')' +
+        ';'
+      
+        'insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,va' +
+        'lorunitario,valortotal) values ('#39'21'#39','#39'6'#39','#39'19'#39','#39'1'#39','#39'4,5'#39','#39'4,5'#39');'
       ''
       '')
     ScrollBars = ssBoth

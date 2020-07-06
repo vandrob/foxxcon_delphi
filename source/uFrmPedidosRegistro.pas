@@ -302,7 +302,7 @@ begin
   percDesconto:=0;
   if ( qtdLanches=2 ) then
       percDesconto:=3
-  else if ( qtdLanches=3 ) then
+  else if (( qtdLanches=3 ) or ( qtdLanches=4 )) then
       percDesconto:=5
   else if (qtdLanches>=5) then
       percDesconto:=10

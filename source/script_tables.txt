@@ -78,20 +78,21 @@ insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunit
 insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('27','5','27','1','2','2');
 
 
-insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('1','TALITA','','2','50,06','9,78','59,84','4','0','0','59,84');
-insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('2','CLEYTON','','','22,59','15,98','38,57','1','0','0','38,57');
-insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('3','GIOVANI','','','66,1','27,58','93,68','5','10','6,61','87,07');
-insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('4','JULIO BASSO','','','2316,28','285,4','2601,68','112','10','231,63','2370,05');
-insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('5','VANDERLEI','','','13,22','0','13,22','1','0','0','13,22');
+insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('1','TALITA','','2','11,81','9,78','21,59','1','0','0','21,59');
+insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('2','CLEYTON','','','45,18','15,98','61,16','2','3','1,36','59,8');
+insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('3','GIOVANI','','','57,78','32,48','90,26','3','5','2,89','87,37');
+insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('4','JULIO BASSO','','','86,8','285,4','372,2','4','5','4,34','367,86');
+insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('5','VANDERLEI','','','66,1','0','66,1','5','10','6,61','59,49');
+insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('6','MARIA','','','133,68','12,49','146,17','6','10','13,37','132,8');
 
-insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('15','1','2','2','11,81','23,62');
-insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('16','2','3','1','22,59','22,59');
-insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('17','1','1','2','13,22','26,44');
-insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('18','3','1','5','13,22','66,1');
-insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('19','4','4','100','21,7','2170');
-insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('20','4','5','12','12,19','146,28');
-insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('21','5','1','1','13,22','13,22');
 
+insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('15','1','2','1','11,81','11,81');
+insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('16','2','3','2','22,59','45,18');
+insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('18','3','1','1','13,22','13,22');
+insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('19','4','4','4','21,7','86,8');
+insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('21','5','1','5','13,22','66,1');
+insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('22','3','6','2','22,28','44,56');
+insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('25','6','6','6','22,28','133,68');
 
 insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('9','2','11','2','3,1','6,2');
 insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('10','2','21','2','4,89','9,78');
@@ -101,4 +102,8 @@ insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valo
 insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('14','3','26','2','2,99','5,98');
 insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('15','4','25','10','20,5','205');
 insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('16','4','23','12','6,7','80,4');
+insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('17','3','18','1','4,9','4,9');
+insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('19','6','11','1','3,1','3,1');
+insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('20','6','21','1','4,89','4,89');
+insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('21','6','19','1','4,5','4,5');
 
