@@ -1,0 +1,104 @@
+CREATE TABLE [ingredientes] ([idingrediente] Counter,[nome] Text (255),[valor] Double, CONSTRAINT [PrimaryKey] PRIMARY KEY ([idingrediente]));
+
+CREATE TABLE [lanches] ([idlanche] Long,[nome] Text (255),[descricao] Text (255),[valor] Double,CONSTRAINT [PrimaryKey] PRIMARY KEY ([idlanche]) );
+
+CREATE TABLE [lanches_ingredientes] ([id] Counter,[idlanche] Long  NOT NULL CONSTRAINT FK_lanches_ingredientes1 REFERENCES lanches (idlanche) ON DELETE CASCADE,[idingrediente] Long  NOT NULL CONSTRAINT FK_lanches_ingredientes2 REFERENCES ingredientes (idingrediente) ON DELETE CASCADE,[quantidade] Double,[valorunitario] Double,[valortotal] Double,CONSTRAINT [PrimaryKey] PRIMARY KEY ([id]) );
+
+
+CREATE TABLE [pedidos] ([idpedido] Long,[cliente] Text (100),[endereco] Text (255),[mesa] Text (50),[valor_lanches] Double,[valor_adicionais] Double,[valor_pedido] Double,[qtd_lanches] Double,[percentual_desconto] Double,[valor_desconto] Double,[valor_total] Double,CONSTRAINT [PrimaryKey] PRIMARY KEY ([idpedido]) );
+CREATE TABLE [pedidos_adicionais] ([id] Counter,[idpedido] Long NOT NULL CONSTRAINT FK_pedidos_adicionais1 REFERENCES pedidos (idpedido) ON DELETE CASCADE,[idingrediente] Long NOT NULL CONSTRAINT FK_pedidos_adicionais2 REFERENCES ingredientes (idingrediente),[qtd] Double,[valorunitario] Double,[valortotal] Double,CONSTRAINT [PrimaryKey] PRIMARY KEY ([id]) );
+CREATE TABLE [pedidos_lanches] ([id] Counter,[idpedido] Long NOT NULL CONSTRAINT FK_pedidos_lanches1 REFERENCES pedidos (idpedido) ON DELETE CASCADE,[idlanche] Long  NOT NULL CONSTRAINT FK_pedidos_lanches2 REFERENCES lanches (idlanche) ,[qtd] Double,[valorunitario] Double,[valortotal] Double,CONSTRAINT [PrimaryKey] PRIMARY KEY ([id]) );
+
+insert into ingredientes (idingrediente,nome,valor) values ('1','PÃO FRANCES','0,7');
+insert into ingredientes (idingrediente,nome,valor) values ('2','PÃO DE FORMA','0,45');
+insert into ingredientes (idingrediente,nome,valor) values ('3','PÃO BAGUETE GERGELIM','0,89');
+insert into ingredientes (idingrediente,nome,valor) values ('4','PÃO HAMBURGER','0,93');
+insert into ingredientes (idingrediente,nome,valor) values ('5','QUEIJO PRATO 100GR','2,1');
+insert into ingredientes (idingrediente,nome,valor) values ('6','QUEIJO CHEDAR 100GR','2,9');
+insert into ingredientes (idingrediente,nome,valor) values ('7','QUEIJO GOUDA 100GR','3,1');
+insert into ingredientes (idingrediente,nome,valor) values ('8','PRESUNTO 150GR','3,43');
+insert into ingredientes (idingrediente,nome,valor) values ('9','ROSBIFE 100GR','4,1');
+insert into ingredientes (idingrediente,nome,valor) values ('10','CONTRA-FILÉ 100GR','3,1');
+insert into ingredientes (idingrediente,nome,valor) values ('11','BACON 100GR','3,1');
+insert into ingredientes (idingrediente,nome,valor) values ('12','CONTRA-FILÉ 150GR','3,6');
+insert into ingredientes (idingrediente,nome,valor) values ('13','CONTRA-FILÉ 180GR','4,6');
+insert into ingredientes (idingrediente,nome,valor) values ('14','CONTRA-FILÉ 220GR','5,6');
+insert into ingredientes (idingrediente,nome,valor) values ('15','HAMBURGER 120GR','3,6');
+insert into ingredientes (idingrediente,nome,valor) values ('16','HAMBURGER 180GR','4,1');
+insert into ingredientes (idingrediente,nome,valor) values ('17','HAMBURGER VEGETARIANO 120GR','3,89');
+insert into ingredientes (idingrediente,nome,valor) values ('18','HAMBURGER VEGETARIANO 180GR','4,9');
+insert into ingredientes (idingrediente,nome,valor) values ('19','FRITAS PEQUENA','4,5');
+insert into ingredientes (idingrediente,nome,valor) values ('20','FRITAS GRANDE','9');
+insert into ingredientes (idingrediente,nome,valor) values ('21','REFRIGERANTE (FANTA/COCA/SPRITE)','4,89');
+insert into ingredientes (idingrediente,nome,valor) values ('23','CERVEJA','6,7');
+insert into ingredientes (idingrediente,nome,valor) values ('24','FRITAS COM CHEDAR E BACON PQ','12,8');
+insert into ingredientes (idingrediente,nome,valor) values ('25','FRITAS COM CHEDAR E BACON GDE','20,5');
+insert into ingredientes (idingrediente,nome,valor) values ('26','ONION RINGS','2,99');
+insert into ingredientes (idingrediente,nome,valor) values ('27','MOLHO VINAGRETE','2');
+insert into ingredientes (idingrediente,nome,valor) values ('28','NUGTS FRANGO(6 UN) 100GR','1,2');
+insert into ingredientes (idingrediente,nome,valor) values ('29','NUGTS PEIXE (6 UN) 100GR','1,45');
+insert into ingredientes (idingrediente,nome,valor) values ('30','QUEIJO PROVOLONE 100GR','4,8');
+
+
+
+insert into lanches (idlanche,nome,descricao,valor) values ('1','FOXX LANCHE FELIZ','Delicioso X-Burger, acompanha 1 refri, porção de fitas pequena, nugts  e o melhor: UM SUPER BRINQUEDO SURPRESA!','13,22');
+insert into lanches (idlanche,nome,descricao,valor) values ('2','FOXX VEGETARIANO','Delicioso X-Burger Vegetarino, acompanha 1 refri!','11,81');
+insert into lanches (idlanche,nome,descricao,valor) values ('3','ORION-FOXX','Uma ótima pedida para petiscar, Anéis de cebolas selecionadas a milanesa e Bacon muuuuito Bacon,  acompanha 2 cervejas geladinhas que Deliciaaaa!','22,59');
+insert into lanches (idlanche,nome,descricao,valor) values ('4','CHURRAS DO CHEF','Nesse lanche nosso chef se superou, 2 fatias generosas de contra-file, com um vinagrete reduzido com chachaça, sensacional!, acompanha porção de fritas com cheedar e bacon, e de dar água na boca!','21,7');
+insert into lanches (idlanche,nome,descricao,valor) values ('5','PROVOCALABRESA MARAVILHA','Um sensacional lanche da casa, feito com a melhor lingüiça toscana da Sadia, tostadinha coberta com uma generosa porção de provolone derretido , fritas e vinagrete em uma baguete com gergelim, mata a fome na hora!','12,19');
+insert into lanches (idlanche,nome,descricao,valor) values ('6','BAURU DO MANÉ','Delicioso bauru artesanal, no pão de baguete com gergelim, com uma generosa porção de rosbife + 3 queijos: cheedar, prato e gouda derretidos no vapor, acompanha 1 porção de fritas crocantes ainda acompanha 1 refrigerante geladinho!','22,28');
+
+
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('1','6','3','1','0,89','0,89');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('2','6','9','1','4,1','4,1');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('3','6','6','1','2,9','2,9');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('4','6','5','1','2,1','2,1');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('5','6','6','1','2,9','2,9');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('6','6','21','1','4,89','4,89');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('7','6','19','1','4,5','4,5');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('8','4','1','1','0,7','0,7');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('9','4','10','2','3,1','6,2');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('10','4','27','1','2','2');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('11','4','24','1','12,8','12,8');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('12','1','4','1','0,93','0,93');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('13','1','16','1','4,1','4,1');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('14','1','5','1','2,1','2,1');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('15','1','28','1','1,2','1,2');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('16','1','21','1','4,89','4,89');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('17','2','4','1','0,93','0,93');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('18','2','17','1','3,89','3,89');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('19','2','5','1','2,1','2,1');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('20','2','21','1','4,89','4,89');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('21','3','26','1','2,99','2,99');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('22','3','11','2','3,1','6,2');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('23','3','23','2','6,7','13,4');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('24','5','3','1','0,89','0,89');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('25','5','30','1','4,8','4,8');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('26','5','19','1','4,5','4,5');
+insert into lanches_ingredientes (id,idlanche,idingrediente,quantidade,valorunitario,valortotal) values ('27','5','27','1','2','2');
+
+
+insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('1','TALITA','','2','50,06','9,78','59,84','4','0','0','59,84');
+insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('2','CLEYTON','','','22,59','15,98','38,57','1','0','0','38,57');
+insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('3','GIOVANI','','','66,1','27,58','93,68','5','10','6,61','87,07');
+insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('4','JULIO BASSO','','','2316,28','285,4','2601,68','112','10','231,63','2370,05');
+insert into pedidos (idpedido,cliente,endereco,mesa,valor_lanches,valor_adicionais,valor_pedido,qtd_lanches,percentual_desconto,valor_desconto,valor_total) values ('5','VANDERLEI','','','13,22','0','13,22','1','0','0','13,22');
+
+insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('15','1','2','2','11,81','23,62');
+insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('16','2','3','1','22,59','22,59');
+insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('17','1','1','2','13,22','26,44');
+insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('18','3','1','5','13,22','66,1');
+insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('19','4','4','100','21,7','2170');
+insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('20','4','5','12','12,19','146,28');
+insert into pedidos_lanches (id,idpedido,idlanche,qtd,valorunitario,valortotal) values ('21','5','1','1','13,22','13,22');
+
+
+insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('9','2','11','2','3,1','6,2');
+insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('10','2','21','2','4,89','9,78');
+insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('11','1','21','2','4,89','9,78');
+insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('12','3','23','2','6,7','13,4');
+insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('13','3','16','2','4,1','8,2');
+insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('14','3','26','2','2,99','5,98');
+insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('15','4','25','10','20,5','205');
+insert into pedidos_adicionais (id,idpedido,idingrediente,qtd,valorunitario,valortotal) values ('16','4','23','12','6,7','80,4');
+
